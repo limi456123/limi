@@ -21,7 +21,7 @@
 <script src="./Public/Admin/javascript/pages/login.js"></script>
 </head>
 <body class="login-page">
-	<section class="login-contain">
+	<form class="login-contain" method="post" action="index.php?p=Admin&c=Login&a=check">
 		<header>
 			<h1>后台管理系统</h1>
 			<p>management system</p>
@@ -31,13 +31,13 @@
 				<li>
 					<div class="form-group">
 						<label class="control-label">管理员账号：</label>
-						<input type="text" placeholder="管理员账号..." class="form-control form-underlined" id="adminName"/>
+						<input type="text" placeholder="管理员账号..." class="form-control form-underlined" id="adminName" name="username"/>
 					</div>
 				</li>
 				<li>
 					<div class="form-group">
 						<label class="control-label">管理员密码：</label>
-						<input type="password" placeholder="管理员密码..." class="form-control form-underlined" id="adminPwd"/>
+						<input type="password" placeholder="管理员密码..." class="form-control form-underlined" id="adminPwd" name="password"/>
 					</div>
 				</li>
 
@@ -71,7 +71,7 @@
 				</li>
 			</ul>
 		</div>
-	</section>
+	</form>
 <div class="mask"></div>
 <div class="dialog">
 	<div class="dialog-hd">

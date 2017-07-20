@@ -1,8 +1,8 @@
 <?php
 
-class IndexController extends Controller
+class IndexController extends platformController
 {
-   public function Index(){
+   public function index(){
        $this->display("index");
    }
 
