@@ -41,4 +41,26 @@ class UsersModel extends Model
         }
 
     }
+    public function getAll(){
+        $sql="select * from users";
+        $rows=$this->db->fetchAll($sql);
+        return $rows;
+    }
+   public function getone( $user_id){
+       $sql="select * from users where user_id=".$user_id;
+       $row=$this->db->fetchRow( $sql);
+       return $row;
+   }
+    public function update($data){
+        $sql="update users set username='{$data['username']}',password='{$data['password']}',realname='{$data['realname']}',sex='{$data['sex']}',telephone='{$data['telephone']}',remark='{$data['remark']}',money='{$data['money']}',is_vip='{$data['is_vip']}',photo='{$data['photo']}' where user_id=".$data['user_id'];
+        $this->db->execute($sql);
+    }
+    public function delete($user_id){
+        $sql="delete from users where user_id=".$user_id;
+        $this->db->execute( $sql);
+    }
+    public function add($data){
+        $sql="insert into users set username='{$data['username']}',password='{$data['password']}',realname='{$data['realname']}',sex='{$data['sex']}',telephone='{$data['telephone']}',remark='{$data['remark']}',money='{$data['money']}',is_vip='{$data['is_vip']}',photo='{$data['photo']}'";
+        $this->db->execute($sql);
+    }
 }

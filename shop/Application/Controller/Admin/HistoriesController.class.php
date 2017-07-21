@@ -11,4 +11,5 @@ class HistoriesController extends Controller
        $this->display("histories_index");
 
    }
+
 }

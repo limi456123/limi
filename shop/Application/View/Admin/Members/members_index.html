@@ -79,16 +79,7 @@
 						</dd>
 					</dl>
 				</li>
-				<li>
-					<dl>
-						<dt>
-							<i class="icon-table"></i>表格UI<i class="icon-angle-right"></i>
-						</dt>
-						<dd>
-							<a href="table.html">基础表格</a>
-						</dd>
-					</dl>
-				</li>
+
 				<li>
 					<dl>
 						<dt>
@@ -300,39 +291,38 @@
 					<thead>
 						<tr>
 
-							<th>会员id</th>
+							<th>员工id</th>
 							<th>用户名</th>
 							<th>密码</th>
 							<th>姓名</th>
 							<th>性别</th>
 							<th>电话</th>
-							<th>备注</th>
-							<th>余额</th>
-							<th>是否VIP</th>
+							<th>所部门id</th>
+							<th>最后登录时间</th>
+							<th>最后登录ip</th>
+							<th>是否管理员</th>
 							<th>头像</th>
 							<th>操作</th>
 						</tr>
 					</thead>
 					<tbody>
-					<a href="index.php?p=Admin&c=Users&a=add">添加</a>
+					<a href="index.php?p=Admin&c=Members&a=add">添加</a>
                       <?php  foreach($rows as $row): ?>
 						<tr class="cen">
-							<td ><?=$row['user_id']?></td>
+							<td ><?=$row['member_id']?></td>
 							<td><?=$row['username']?></td>
 							<td><?=$row['password']?></td>
 							<td><?=$row['realname']?></td>
 							<td><?=$row['sex']?></td>
 							<td><?=$row['telephone']?></td>
-							<td><?=$row['remark']?></td>
-							<td><?=$row['money']?></td>
-							<td><?=$row['is_vip']?></td>
+							<td><?=$row['group_id']?></td>
+							<td><?=$row['last_login']?></td>
+							<td><?=$row['last_loginip']?></td>
+							<td><?=$row['is_admin']?></td>
 							<td><?=$row['photo']?></td>
 							<td>
-								<a >充值</a>
-								<a  >消费</a>
-								<a >消费记录</a>
-								<a href="index.php?p=Admin&c=Users&a=update&id=<?=$row['user_id']?>">编辑</a>
-								<a href="index.php?p=Admin&c=Users&a=delete&id=<?=$row['user_id']?>">删除</a>
+								<a href="index.php?p=Admin&c=Members&a=update&id=<?=$row['member_id']?>">编辑</a>
+								<a href="index.php?p=Admin&c=Members&a=delete&id=<?=$row['member_id']?>">删除</a>
 							</td>
 						</tr>
                      <?php endforeach;?>
@@ -350,7 +340,7 @@
 					<em class="uppercase">
 						<i class="icon-user"></i>
 						author:deathghost
-					</em> | 
+					</em> |
 					<em class="uppercase"><i class="icon-envelope-alt"></i>
 						更多模板： <a href="http://www.mycodes.net/" target="_blank">源码之家</a>
 					</em>

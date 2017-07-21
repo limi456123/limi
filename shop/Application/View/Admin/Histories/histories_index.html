@@ -301,9 +301,9 @@
 							<td><?=$row['remainder']?></td>
 							<td><?=$row['plans']?></td>
 							<td>
-								<a title="编辑" class="mr-5">编辑</a>
-								<a title="详情" class="mr-5">详情</a>
-								<a title="删除">删除</a>
+								<a title="编辑" class="mr-5" href="index.php?p=Admin&c=Histories&a=update&id=<?=$row['history_id']?>">编辑</a>
+								<a title="详情" class="mr-5" >详情</a>
+								<a title="删除" href="index.php?p=Admin&c=Histories&a=dalete&id=<?=$row['history_id']?>">删除</a>
 							</td>
 						</tr>
                      <?php endforeach;?>
